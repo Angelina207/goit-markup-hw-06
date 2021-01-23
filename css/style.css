@@ -43,6 +43,7 @@ header {
     padding: 0px;
     width: 100%;
     top: 0px;
+    left: 0px;
     z-index: 2;
 }
 
@@ -282,6 +283,7 @@ header {
 .position-add .desing-text {
     background: rgba(47, 48, 58, 0.8);
     bottom: 3px;
+    left: 0px;
     width: 370px;
     padding: 27px 0px;
     position: absolute;
@@ -295,6 +297,7 @@ header {
     color: var(--title-color);
     text-transform: uppercase;
     text-align: center;
+    font-weight: bold;
 }
 
 .images-dev {
@@ -442,15 +445,67 @@ footer {
 }
 
 .text-join {
-    margin: 0px 0px 0px 70px;
-    padding: 0px;
     font-size: 14px;
     line-height: 16px;
     letter-spacing: 0.03em;
+    margin: 0px 0px 0px 70px;
+    padding: 12px 0px 0px 0px;
     color: var(--title-color);
-    display: inline-flex;
     text-transform: uppercase;
+    display: inline-flex;
     position: absolute;
+    font-weight: bold;
+}
+
+.footer-email {
+    width: 358px;
+    height: 50px;
+    padding: 15px 16px;
+    border-radius: 4px;
+    margin: 45px 12px 0px 70px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background-color: var(--dark--background-color);
+}
+
+.footer-email::placeholder {
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.btn-send {
+    display: inline-flex;
+    cursor: pointer;
+    width: 200px;
+    height: 50px;
+    font-size: 16px;
+    line-height: 30px;
+    border-radius: 4px;
+    font-weight: bold;
+    letter-spacing: 0.06em;
+    margin: 45px 0px 0px 0px;
+    padding: 0px;
+    align-items: center;
+    border-style: none;
+    justify-content: center;
+    outline: transparent;
+    color: var(--title-color);
+    background-color: var(--accent-color);
+    transition: text-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-send:hover,
+.btn-send:focus {
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.svg-send {
+    width: 24px;
+    height: 24px;
+    margin-left: 10px;
+    fill: var(--title-color);
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 
@@ -479,7 +534,7 @@ footer {
     border-radius: 50%;
     align-items: center;
     justify-content: center;
-    margin: 20px 10px 0px 0px;
+    margin: 30px 10px 0px 0px;
     fill: var(--title-color);
     background: rgba(255, 255, 255, 0.1);
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -587,22 +642,22 @@ footer {
 .btn {
     font-family: Roboto;
     border-radius: 4px;
-    padding: 6px 22px 6px 22px;
-    background-color: var(--sec-background-color);
     font-weight: 500;
     font-size: 16px;
     line-height: 1.52;
     text-align: center;
-    letter-spacing: 0.03em;
     border-style: none;
+    letter-spacing: 0.03em;
+    padding: 6px 22px 6px 22px;
+    background-color: var(--sec-background-color);
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-btn {
     margin: 0px;
     padding: 0px;
-    justify-content: center;
     display: flex;
+    justify-content: center;
 }
 
 .list-btn {
@@ -611,8 +666,8 @@ footer {
 
 .btn:hover,
 .btn:focus {
-    background-color: var(--accent-color);
     color: var(--title-color);
+    background-color: var(--accent-color);
     box-shadow: 2px 14px 22px -5px rgba(113, 155, 187, 0.6);
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -721,6 +776,7 @@ footer {
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 3;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.2);
@@ -745,4 +801,9 @@ footer {
     box-sizing: border-box;
     border: 1px solid rgba(0, 0, 0, 0.1);
     background-color: var(--header-background-color);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-close:hover {
+    color: var(--accent-color);
 }
